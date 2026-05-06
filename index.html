@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX Advisory Group | Strategic Financial Solutions</title>
+    <meta name="description" content="NEX Advisory Group helps individuals and businesses unlock smarter financial opportunities with confidence and clarity.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+        /* Homepage Specific Styles */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-headline {
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subheadline {
+            font-size: 1.25rem;
+            color: var(--silver-light);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--accent-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--silver-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 1rem;
+            background: var(--grad-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent-light);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--glass-border);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bg-color);
+            border: 4px solid var(--accent-blue);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -10px; }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            text-align: left;
+        }
+
+        .testimonial-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--glass-border);
+            /* Object fit for actual images */
+            object-fit: cover;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            background: var(--glass-bg);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 1.5rem;
+        }
+
+        .cta-banner {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: var(--glass-bg);
+            border-radius: 2rem;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle at center, rgba(0, 102, 255, 0.1) 0%, transparent 60%);
+            z-index: 0;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item::after { left: 21px; }
+            .right { left: 0%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="nex">NEX</span><span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-headline">
+                    Strategic Financial Solutions That <span class="text-gradient">Move You Forward</span>
+                </h1>
+                <p class="hero-subheadline">
+                    We help individuals and businesses unlock smarter financial opportunities with confidence and clarity.
+                </p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="https://wa.me/1234567890" class="btn btn-outline"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Statistics Section -->
+    <section class="stats" style="padding: 2rem 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); background: rgba(0,0,0,0.2);">
+        <div class="container fade-in">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>RM<span class="counter-value" data-target="50">0</span>M+</h3>
+                    <p>Financing Assisted</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter-value" data-target="1000">0</span>+</h3>
+                    <p>Clients Served</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter-value" data-target="95">0</span>%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter-value" data-target="10">0</span>+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="fade-in" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="text-silver">Our Premium Services</h2>
+                <p>Comprehensive financial strategies tailored to your unique goals.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="glass-card service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3>Debt Restructuring</h3>
+                    <p>Regain control of your finances with strategic debt consolidation and restructuring plans designed to lower your monthly commitments.</p>
+                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="glass-card service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3>Business Financing</h3>
+                    <p>Fuel your enterprise growth with tailored corporate financing facilities, working capital, and expansion loans.</p>
+                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Financing</h3>
+                    <p>Access customized personal funding solutions to achieve your life goals, from home renovations to investment capital.</p>
+                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>SME Growth Solutions</h3>
+                    <p>Strategic advisory and capital matching to accelerate your Small & Medium Enterprise to the next level.</p>
+                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="glass-card service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Credit Consultation</h3>
+                    <p>Expert analysis and optimization of your credit profile to unlock better financing terms and higher approval rates.</p>
+                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="glass-card service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3>Mortgage & Refinancing</h3>
+                    <p>Secure the best rates for your property purchase or unlock equity from your existing real estate portfolio.</p>
+                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose NEX Section -->
+    <section class="why-us" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="fade-in" style="margin-bottom: 4rem;">
+                <h2 class="text-gradient">Why Choose NEX</h2>
+                <p>The strategic advantage for your financial journey.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <div>
+                        <h4>Experienced Specialists</h4>
+                        <p>Our team consists of ex-bankers and seasoned financial advisors.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <div>
+                        <h4>Tailored Strategies</h4>
+                        <p>No cookie-cutter solutions. We build strategies around your unique profile.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div>
+                        <h4>Transparent Process</h4>
+                        <p>Clear communication and full visibility throughout your consultation.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div>
+                        <h4>Fast Response</h4>
+                        <p>Agile support team dedicated to moving your application forward quickly.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <div>
+                        <h4>Strong Banking Network</h4>
+                        <p>Direct access to key decision-makers across major financial institutions.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+                    <div>
+                        <h4>Confidential Service</h4>
+                        <p>Your data and financial details are protected with the highest security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="fade-in" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="text-silver">Our Strategic Process</h2>
+                <p>A streamlined journey to financial success.</p>
+            </div>
+
+            <div class="timeline fade-in">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-light);">01. Initial Consultation</h3>
+                        <p>We sit down to understand your goals, challenges, and current financial position in a confidential setting.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-light);">02. Financial Assessment</h3>
+                        <p>Our experts perform a deep dive into your profile to identify opportunities and potential roadblocks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-light);">03. Strategy Recommendation</h3>
+                        <p>We present a tailored, step-by-step roadmap designed to achieve your specific financial objectives.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-light);">04. Submission & Support</h3>
+                        <p>We handle the complex paperwork and liaise with institutions on your behalf through to approval.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="fade-in" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="text-gradient">Client Success Stories</h2>
+                <p>Hear from those who have transformed their financial future with NEX.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="glass-card testimonial-card fade-in">
+                    <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
+                    <p>"NEX completely changed the trajectory of my business. Their SME growth solution helped us secure the capital we needed to open two new branches within a year."</p>
+                    <div class="testimonial-profile">
+                        <div class="profile-img" style="background: linear-gradient(135deg, #0066ff, #0a1329);"></div>
+                        <div>
+                            <h4 style="font-size: 1rem;">Ahmad T.</h4>
+                            <p style="font-size: 0.8rem; margin: 0;">SME Owner, Retail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card testimonial-card fade-in">
+                    <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
+                    <p>"I was struggling with multiple high-interest debts. The team at NEX structured a consolidation plan that reduced my monthly commitments by 40%."</p>
+                    <div class="testimonial-profile">
+                        <div class="profile-img" style="background: linear-gradient(135deg, #00d0ff, #0a1329);"></div>
+                        <div>
+                            <h4 style="font-size: 1rem;">Sarah L.</h4>
+                            <p style="font-size: 0.8rem; margin: 0;">Working Professional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card testimonial-card fade-in">
+                    <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
+                    <p>"Professional, transparent, and highly effective. They navigated the complex banking requirements for our corporate financing seamlessly."</p>
+                    <div class="testimonial-profile">
+                        <div class="profile-img" style="background: linear-gradient(135deg, #94a3b8, #0a1329);"></div>
+                        <div>
+                            <h4 style="font-size: 1rem;">Michael C.</h4>
+                            <p style="font-size: 0.8rem; margin: 0;">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="fade-in" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="text-silver">Frequently Asked Questions</h2>
+                <p>Everything you need to know about our services.</p>
+            </div>
+
+            <div class="faq-container fade-in">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does approval take?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 1rem;">Approval timelines vary depending on the complexity of your case and the specific facility required. However, due to our streamlined process and strong banking network, we typically secure preliminary approvals within 3 to 7 working days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is consultation free?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 1rem;">Yes, your initial consultation is completely free and carries no obligation. We use this time to assess your situation and determine if we can add value to your financial journey.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What documents are required?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 1rem;">Generally, we require standard identification, income proofs (such as salary slips or audited accounts for businesses), bank statements, and credit reports. A specific checklist will be provided after your initial assessment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can you assist businesses with cash flow challenges?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 1rem;">Absolutely. We specialize in SME growth and restructuring. We can identify working capital solutions, invoice financing, or debt restructuring options to stabilize and improve your cash flow.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my information confidential?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p style="padding-top: 1rem;">We adhere to strict data privacy policies (PDPA compliant). All your personal and financial information is treated with the highest level of security and confidentiality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" style="padding-bottom: 6rem;">
+        <div class="container">
+            <div class="cta-banner fade-in">
+                <div class="cta-content">
+                    <h2 class="text-gradient" style="font-size: clamp(2rem, 4vw, 3.5rem);">Let’s Build Your Financial Future Together</h2>
+                    <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Take the first step towards smarter financial growth. Speak to our specialists today.</p>
+                    <div class="hero-btns" style="justify-content: center;">
+                        <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
+                        <a href="https://wa.me/1234567890" class="btn btn-outline"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <span class="nex">NEX</span><span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                    </a>
+                    <p style="margin-bottom: 1.5rem; max-width: 300px;">Empowering businesses and individuals with strategic financial solutions for sustainable growth.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Debt Restructuring</a></li>
+                        <li><a href="services.html">Business Financing</a></li>
+                        <li><a href="services.html">Personal Financing</a></li>
+                        <li><a href="services.html">SME Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul style="color: var(--text-muted);">
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-location-dot" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>Level 42, Menara NEX,<br>Jalan Sultan Ismail,<br>50250 Kuala Lumpur,<br>Malaysia</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fa-solid fa-phone" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>+60 3 1234 5678</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem;">
+                            <i class="fa-solid fa-envelope" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>hello@nexadvisory.com.my</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEX Advisory Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

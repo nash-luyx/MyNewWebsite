@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | NEX Advisory Group</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 4rem;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .services-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+        }
+
+        .service-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .service-row.reverse {
+            direction: rtl;
+        }
+
+        .service-row.reverse > * {
+            direction: ltr;
+        }
+
+        .service-visual {
+            width: 100%;
+            height: 350px;
+            border-radius: 2rem;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.5) 100%);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .service-icon-large {
+            font-size: 5rem;
+            color: var(--accent-blue);
+            background: var(--glass-bg);
+            padding: 2rem;
+            border-radius: 50%;
+            border: 1px solid var(--glass-border);
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .service-features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .service-features li i {
+            color: var(--accent-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-row { grid-template-columns: 1fr; gap: 2rem; }
+            .service-row.reverse { direction: ltr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="nex">NEX</span><span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html" style="color: var(--accent-light);">Services</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header fade-in">
+        <div class="container">
+            <h1 class="text-gradient">Our Strategic Services</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Comprehensive financial solutions tailored to empower your personal and business growth.</p>
+        </div>
+    </header>
+
+    <!-- Services Detailed -->
+    <section class="services-detailed">
+        <div class="container services-layout">
+            
+            <!-- Service 1 -->
+            <div class="service-row fade-in">
+                <div class="service-visual">
+                    <div class="service-icon-large"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                </div>
+                <div>
+                    <h2 class="text-silver">Debt Restructuring</h2>
+                    <p>High monthly commitments can paralyze growth and induce stress. Our debt restructuring service evaluates your current liabilities and consolidates them into a single, manageable facility. We negotiate with institutions to lower your interest rates and extend tenures.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Reduce monthly commitments by up to 50%</li>
+                        <li><i class="fa-solid fa-check"></i> Consolidate credit cards and personal loans</li>
+                        <li><i class="fa-solid fa-check"></i> Avoid bankruptcy and CCRIS/CTOS blacklisting</li>
+                        <li><i class="fa-solid fa-check"></i> Tailored repayment schedules</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top: 1.5rem;">Discuss Your Profile</a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-row reverse fade-in">
+                <div class="service-visual">
+                    <div class="service-icon-large"><i class="fa-solid fa-building-columns"></i></div>
+                </div>
+                <div>
+                    <h2 class="text-silver">Business Financing</h2>
+                    <p>Scaling your enterprise requires reliable capital. We assist SMEs in navigating the complex landscape of commercial loans, ensuring your business profile meets elite banking standards for higher approval rates and optimal facilities.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Working capital & term loans</li>
+                        <li><i class="fa-solid fa-check"></i> Trade facilities (LC, BA, BG)</li>
+                        <li><i class="fa-solid fa-check"></i> Government-backed SME funding</li>
+                        <li><i class="fa-solid fa-check"></i> Comprehensive profile enhancement</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top: 1.5rem;">Explore SME Funding</a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-row fade-in">
+                <div class="service-visual">
+                    <div class="service-icon-large"><i class="fa-solid fa-user-tie"></i></div>
+                </div>
+                <div>
+                    <h2 class="text-silver">Personal Financing Advisory</h2>
+                    <p>Whether you are planning a major life event, investing in education, or executing a home renovation, we find the personal financing solutions that offer the lowest rates and the fastest turnaround time, entirely tailored to your income profile.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Access top-tier bank rates</li>
+                        <li><i class="fa-solid fa-check"></i> Fast-track approval process</li>
+                        <li><i class="fa-solid fa-check"></i> Islamic and Conventional options</li>
+                        <li><i class="fa-solid fa-check"></i> Zero upfront processing fees</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top: 1.5rem;">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-row reverse fade-in">
+                <div class="service-visual">
+                    <div class="service-icon-large"><i class="fa-solid fa-house-chimney"></i></div>
+                </div>
+                <div>
+                    <h2 class="text-silver">Mortgage & Refinancing</h2>
+                    <p>Your property is your greatest asset. We help you unlock its equity to generate cash out for other investments, or simply refinance your current mortgage to take advantage of lower Base Lending Rates (BLR/BR).</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check"></i> Property equity cash out</li>
+                        <li><i class="fa-solid fa-check"></i> Refinancing for rate reduction</li>
+                        <li><i class="fa-solid fa-check"></i> New property purchase advisory</li>
+                        <li><i class="fa-solid fa-check"></i> Commercial property financing</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="margin-top: 1.5rem;">Evaluate My Property</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <span class="nex">NEX</span><span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                    </a>
+                    <p style="margin-bottom: 1.5rem; max-width: 300px;">Empowering businesses and individuals with strategic financial solutions for sustainable growth.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul style="color: var(--text-muted);">
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fa-solid fa-phone" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>+60 3 1234 5678</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem;">
+                            <i class="fa-solid fa-envelope" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>hello@nexadvisory.com.my</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEX Advisory Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

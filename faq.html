@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | NEX Advisory Group</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 4rem;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .faq-search-container {
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            position: relative;
+        }
+
+        .faq-search-input {
+            width: 100%;
+            padding: 1.2rem 1.5rem 1.2rem 3rem;
+            border-radius: 3rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            color: white;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+
+        .faq-search-input:focus {
+            outline: none;
+            border-color: var(--accent-light);
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 0 15px rgba(0, 208, 255, 0.2);
+        }
+
+        .faq-search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-category-title {
+            margin: 3rem 0 1.5rem;
+            color: var(--accent-light);
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            background: var(--glass-bg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+            color: var(--accent-blue);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 1.5rem;
+        }
+
+        /* Hide elements not matching search */
+        .faq-item.hidden {
+            display: none;
+        }
+        
+        .faq-category.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="nex">NEX</span><span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faq.html" style="color: var(--accent-light);">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header fade-in">
+        <div class="container">
+            <h1 class="text-gradient">Frequently Asked Questions</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Find answers to common questions about our services and processes.</p>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-page">
+        <div class="container">
+            <!-- Search -->
+            <div class="faq-search-container fade-in">
+                <i class="fa-solid fa-magnifying-glass faq-search-icon"></i>
+                <input type="text" id="faqSearch" class="faq-search-input" placeholder="Search for a question...">
+            </div>
+
+            <!-- FAQ Content -->
+            <div class="faq-container fade-in">
+                
+                <!-- Category 1 -->
+                <div class="faq-category">
+                    <h2 class="faq-category-title">General Inquiries</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is the initial consultation really free?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">Yes, your initial consultation is completely free and carries no obligation. We use this time to assess your situation and determine if we can add value to your financial journey.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How is NEX Advisory Group different from a bank?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">While a single bank only offers its own products, we operate independently and have access to the entire financial market. We analyze your profile and match you with the institution that offers the highest probability of approval and the best rates for your specific case.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is my information kept confidential?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">Absolutely. We adhere to strict data privacy policies and are fully PDPA compliant. All your personal and financial information is treated with the highest level of security and confidentiality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="faq-category">
+                    <h2 class="faq-category-title">Services & Processes</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long does the approval process typically take?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">Approval timelines vary depending on the complexity of your case and the specific facility required. Due to our streamlined process and strong banking network, personal financing can take 3-7 days, while complex SME or restructuring cases may take 2-4 weeks.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What documents are required to start?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">Generally, we require standard identification (NRIC), recent 3-6 months payslips (for individuals) or audited accounts (for businesses), latest bank statements, EPF statements, and your CCRIS report. A customized checklist will be provided to you during the consultation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can you assist businesses with severe cash flow challenges?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">Yes. We specialize in SME growth and debt restructuring. We can identify working capital solutions, invoice financing, or strategic debt consolidation options to stabilize and improve your cash flow.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="faq-category">
+                    <h2 class="faq-category-title">Eligibility</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can you help if I have a poor CCRIS/CTOS record?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">Yes, we have specialized strategies for profiles with high commitments or minor negative records. We will evaluate your report, advise on actionable steps to improve your score, and negotiate with selected banks that are more lenient to specific credit profiles.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is there a minimum income requirement for your services?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p style="padding-top: 1rem;">While requirements vary by facility, generally we look for a minimum monthly income of RM3,000 for personal financing, and an annual turnover of RM500,000 for SME financing to ensure we can secure meaningful facilities for you.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Contact Prompt -->
+            <div class="fade-in" style="text-align: center; margin-top: 5rem;">
+                <p style="font-size: 1.1rem; color: var(--silver-light); margin-bottom: 1.5rem;">Still have questions? We're here to help.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; margin-top: 2rem;">
+                <p>&copy; 2026 NEX Advisory Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('faqSearch');
+        const faqItems = document.querySelectorAll('.faq-item');
+        const faqCategories = document.querySelectorAll('.faq-category');
+
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+
+            faqCategories.forEach(category => {
+                let hasVisibleItems = false;
+                const items = category.querySelectorAll('.faq-item');
+                
+                items.forEach(item => {
+                    const text = item.innerText.toLowerCase();
+                    if (text.includes(term)) {
+                        item.classList.remove('hidden');
+                        hasVisibleItems = true;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                if (hasVisibleItems) {
+                    category.classList.remove('hidden');
+                } else {
+                    category.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
