@@ -193,38 +193,63 @@
                 <!-- Contact Form -->
                 <div class="glass-card fade-in">
                     <h3 style="margin-bottom: 2rem;">Schedule a Free Consultation</h3>
-                    <form action="#" method="POST"
-                        onsubmit="event.preventDefault(); alert('Message sent successfully. Our team will contact you shortly.');">
+                    <form id="consultation-form">
                         <div class="form-group">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" placeholder="John Doe" required>
+                            <input type="text" id="wa-name" class="form-control" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" placeholder="john@example.com" required>
+                            <input type="email" id="wa-email" class="form-control" placeholder="john@example.com"
+                                required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" placeholder="+60 12 345 6789" required>
+                            <input type="tel" id="wa-phone" class="form-control" placeholder="+60 12 345 6789" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Service of Interest</label>
-                            <select class="form-control" required style="appearance: none;">
+                            <select id="wa-service" class="form-control" required style="appearance: none;">
                                 <option value="" disabled selected>Select a service</option>
-                                <option value="debt">Debt Restructuring</option>
-                                <option value="business">Business Financing</option>
-                                <option value="personal">Personal Financing</option>
-                                <option value="mortgage">Mortgage & Refinancing</option>
-                                <option value="other">Other Inquiry</option>
+                                <option value="Debt Restructuring">Debt Restructuring</option>
+                                <option value="Business Financing">Business Financing</option>
+                                <option value="Personal Financing">Personal Financing</option>
+                                <option value="Mortgage & Refinancing">Mortgage & Refinancing</option>
+                                <option value="Other Inquiry">Other Inquiry</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Message (Optional)</label>
-                            <textarea class="form-control"
+                            <textarea id="wa-message" class="form-control"
                                 placeholder="Tell us briefly about your financial goals..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
                     </form>
+
+                    <script>
+                        document.getElementById('consultation-form').addEventListener('submit', function (e) {
+                            e.preventDefault();
+
+                            const name = document.getElementById('wa-name').value;
+                            const email = document.getElementById('wa-email').value;
+                            const phone = document.getElementById('wa-phone').value;
+                            const service = document.getElementById('wa-service').value;
+                            const message = document.getElementById('wa-message').value;
+
+                            let text = `*New Consultation Request*\n\n`;
+                            text += `*Full Name:* ${name}\n`;
+                            text += `*Email:* ${email}\n`;
+                            text += `*Phone:* ${phone}\n`;
+                            text += `*Service of Interest:* ${service}\n`;
+
+                            if (message.trim() !== '') {
+                                text += `*Message:* ${message}`;
+                            }
+
+                            const whatsappUrl = `https://wa.me/60107131629?text=${encodeURIComponent(text)}`;
+                            window.open(whatsappUrl, '_blank');
+                        });
+                    </script>
                 </div>
             </div>
 
