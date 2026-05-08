@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEX Advisory Group | Strategic Financial Solutions</title>
-    <meta name="description" content="NEX Advisory Group helps individuals and businesses unlock smarter financial opportunities with confidence and clarity.">
+    <meta name="description"
+        content="NEX Advisory Group helps individuals and businesses unlock smarter financial opportunities with confidence and clarity.">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
-    
+
     <style>
         /* Homepage Specific Styles */
         .hero {
@@ -19,11 +21,14 @@
             padding-top: 80px;
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
             z-index: -1;
         }
@@ -153,10 +158,18 @@
             z-index: 1;
         }
 
-        .left { left: 0; }
-        .right { left: 50%; }
-        .right::after { left: -10px; }
-        
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
         .timeline-content {
             padding: 20px 30px;
             background: var(--glass-bg);
@@ -240,28 +253,45 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .cta-banner::before {
             content: '';
             position: absolute;
-            top: -50%; left: -50%; width: 200%; height: 200%;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
             background: radial-gradient(circle at center, rgba(0, 102, 255, 0.1) 0%, transparent 60%);
             z-index: 0;
         }
-        
+
         .cta-content {
             position: relative;
             z-index: 1;
         }
 
         @media screen and (max-width: 768px) {
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-item::after { left: 21px; }
-            .right { left: 0%; }
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .right {
+                left: 0%;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
@@ -270,11 +300,11 @@
             <a href="index.html" class="logo">
                 <span class="nex">NEX</span><span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
             </a>
-            
+
             <button class="mobile-menu-btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            
+
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
@@ -282,7 +312,8 @@
                 <a href="testimonials.html">Testimonials</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Free Consultation</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Free
+                    Consultation</a>
             </div>
         </div>
     </nav>
@@ -295,18 +326,21 @@
                     Strategic Financial Solutions That <span class="text-gradient">Move You Forward</span>
                 </h1>
                 <p class="hero-subheadline">
-                    We help individuals and businesses unlock smarter financial opportunities with confidence and clarity.
+                    We help individuals and businesses unlock smarter financial opportunities with confidence and
+                    clarity.
                 </p>
                 <div class="hero-btns">
                     <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="https://wa.me/1234567890" class="btn btn-outline"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp Us</a>
+                    <a href="https://wa.me/60107131629" class="btn btn-outline"><i class="fa-brands fa-whatsapp"
+                            style="margin-right: 8px;"></i> WhatsApp Us</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Trust & Statistics Section -->
-    <section class="stats" style="padding: 2rem 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); background: rgba(0,0,0,0.2);">
+    <section class="stats"
+        style="padding: 2rem 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); background: rgba(0,0,0,0.2);">
         <div class="container fade-in">
             <div class="stats-grid">
                 <div class="stat-item">
@@ -336,7 +370,7 @@
                 <h2 class="text-silver">Our Premium Services</h2>
                 <p>Comprehensive financial strategies tailored to your unique goals.</p>
             </div>
-            
+
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="glass-card service-card fade-in">
@@ -344,18 +378,24 @@
                         <i class="fa-solid fa-hand-holding-dollar"></i>
                     </div>
                     <h3>Debt Restructuring</h3>
-                    <p>Regain control of your finances with strategic debt consolidation and restructuring plans designed to lower your monthly commitments.</p>
-                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>Regain control of your finances with strategic debt consolidation and restructuring plans
+                        designed to lower your monthly commitments.</p>
+                    <a href="services.html"
+                        style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn
+                        More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                
+
                 <!-- Service 2 -->
                 <div class="glass-card service-card fade-in">
                     <div class="service-icon">
                         <i class="fa-solid fa-building-columns"></i>
                     </div>
                     <h3>Business Financing</h3>
-                    <p>Fuel your enterprise growth with tailored corporate financing facilities, working capital, and expansion loans.</p>
-                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>Fuel your enterprise growth with tailored corporate financing facilities, working capital, and
+                        expansion loans.</p>
+                    <a href="services.html"
+                        style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn
+                        More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Service 3 -->
@@ -364,8 +404,11 @@
                         <i class="fa-solid fa-user-tie"></i>
                     </div>
                     <h3>Personal Financing</h3>
-                    <p>Access customized personal funding solutions to achieve your life goals, from home renovations to investment capital.</p>
-                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>Access customized personal funding solutions to achieve your life goals, from home renovations to
+                        investment capital.</p>
+                    <a href="services.html"
+                        style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn
+                        More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Service 4 -->
@@ -374,28 +417,37 @@
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
                     <h3>SME Growth Solutions</h3>
-                    <p>Strategic advisory and capital matching to accelerate your Small & Medium Enterprise to the next level.</p>
-                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>Strategic advisory and capital matching to accelerate your Small & Medium Enterprise to the next
+                        level.</p>
+                    <a href="services.html"
+                        style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn
+                        More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                
+
                 <!-- Service 5 -->
                 <div class="glass-card service-card fade-in">
                     <div class="service-icon">
                         <i class="fa-solid fa-file-invoice-dollar"></i>
                     </div>
                     <h3>Credit Consultation</h3>
-                    <p>Expert analysis and optimization of your credit profile to unlock better financing terms and higher approval rates.</p>
-                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>Expert analysis and optimization of your credit profile to unlock better financing terms and
+                        higher approval rates.</p>
+                    <a href="services.html"
+                        style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn
+                        More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                
+
                 <!-- Service 6 -->
                 <div class="glass-card service-card fade-in">
                     <div class="service-icon">
                         <i class="fa-solid fa-house-chimney"></i>
                     </div>
                     <h3>Mortgage & Refinancing</h3>
-                    <p>Secure the best rates for your property purchase or unlock equity from your existing real estate portfolio.</p>
-                    <a href="services.html" style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    <p>Secure the best rates for your property purchase or unlock equity from your existing real estate
+                        portfolio.</p>
+                    <a href="services.html"
+                        style="color: var(--accent-light); text-decoration: none; font-weight: 600; margin-top: auto;">Learn
+                        More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -408,7 +460,7 @@
                 <h2 class="text-gradient">Why Choose NEX</h2>
                 <p>The strategic advantage for your financial journey.</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-item fade-in">
                     <div class="feature-icon"><i class="fa-solid fa-user-shield"></i></div>
@@ -468,25 +520,29 @@
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <h3 style="color: var(--accent-light);">01. Initial Consultation</h3>
-                        <p>We sit down to understand your goals, challenges, and current financial position in a confidential setting.</p>
+                        <p>We sit down to understand your goals, challenges, and current financial position in a
+                            confidential setting.</p>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <h3 style="color: var(--accent-light);">02. Financial Assessment</h3>
-                        <p>Our experts perform a deep dive into your profile to identify opportunities and potential roadblocks.</p>
+                        <p>Our experts perform a deep dive into your profile to identify opportunities and potential
+                            roadblocks.</p>
                     </div>
                 </div>
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <h3 style="color: var(--accent-light);">03. Strategy Recommendation</h3>
-                        <p>We present a tailored, step-by-step roadmap designed to achieve your specific financial objectives.</p>
+                        <p>We present a tailored, step-by-step roadmap designed to achieve your specific financial
+                            objectives.</p>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <h3 style="color: var(--accent-light);">04. Submission & Support</h3>
-                        <p>We handle the complex paperwork and liaise with institutions on your behalf through to approval.</p>
+                        <p>We handle the complex paperwork and liaise with institutions on your behalf through to
+                            approval.</p>
                     </div>
                 </div>
             </div>
@@ -503,8 +559,10 @@
 
             <div class="testimonials-grid">
                 <div class="glass-card testimonial-card fade-in">
-                    <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
-                    <p>"NEX completely changed the trajectory of my business. Their SME growth solution helped us secure the capital we needed to open two new branches within a year."</p>
+                    <i class="fa-solid fa-quote-left"
+                        style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
+                    <p>"NEX completely changed the trajectory of my business. Their SME growth solution helped us secure
+                        the capital we needed to open two new branches within a year."</p>
                     <div class="testimonial-profile">
                         <div class="profile-img" style="background: linear-gradient(135deg, #0066ff, #0a1329);"></div>
                         <div>
@@ -515,8 +573,10 @@
                 </div>
 
                 <div class="glass-card testimonial-card fade-in">
-                    <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
-                    <p>"I was struggling with multiple high-interest debts. The team at NEX structured a consolidation plan that reduced my monthly commitments by 40%."</p>
+                    <i class="fa-solid fa-quote-left"
+                        style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
+                    <p>"I was struggling with multiple high-interest debts. The team at NEX structured a consolidation
+                        plan that reduced my monthly commitments by 40%."</p>
                     <div class="testimonial-profile">
                         <div class="profile-img" style="background: linear-gradient(135deg, #00d0ff, #0a1329);"></div>
                         <div>
@@ -527,8 +587,10 @@
                 </div>
 
                 <div class="glass-card testimonial-card fade-in">
-                    <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
-                    <p>"Professional, transparent, and highly effective. They navigated the complex banking requirements for our corporate financing seamlessly."</p>
+                    <i class="fa-solid fa-quote-left"
+                        style="font-size: 2rem; color: var(--glass-border); margin-bottom: 1rem;"></i>
+                    <p>"Professional, transparent, and highly effective. They navigated the complex banking requirements
+                        for our corporate financing seamlessly."</p>
                     <div class="testimonial-profile">
                         <div class="profile-img" style="background: linear-gradient(135deg, #94a3b8, #0a1329);"></div>
                         <div>
@@ -556,7 +618,9 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p style="padding-top: 1rem;">Approval timelines vary depending on the complexity of your case and the specific facility required. However, due to our streamlined process and strong banking network, we typically secure preliminary approvals within 3 to 7 working days.</p>
+                        <p style="padding-top: 1rem;">Approval timelines vary depending on the complexity of your case
+                            and the specific facility required. However, due to our streamlined process and strong
+                            banking network, we typically secure preliminary approvals within 3 to 7 working days.</p>
                     </div>
                 </div>
 
@@ -566,7 +630,9 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p style="padding-top: 1rem;">Yes, your initial consultation is completely free and carries no obligation. We use this time to assess your situation and determine if we can add value to your financial journey.</p>
+                        <p style="padding-top: 1rem;">Yes, your initial consultation is completely free and carries no
+                            obligation. We use this time to assess your situation and determine if we can add value to
+                            your financial journey.</p>
                     </div>
                 </div>
 
@@ -576,7 +642,9 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p style="padding-top: 1rem;">Generally, we require standard identification, income proofs (such as salary slips or audited accounts for businesses), bank statements, and credit reports. A specific checklist will be provided after your initial assessment.</p>
+                        <p style="padding-top: 1rem;">Generally, we require standard identification, income proofs (such
+                            as salary slips or audited accounts for businesses), bank statements, and credit reports. A
+                            specific checklist will be provided after your initial assessment.</p>
                     </div>
                 </div>
 
@@ -586,7 +654,9 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p style="padding-top: 1rem;">Absolutely. We specialize in SME growth and restructuring. We can identify working capital solutions, invoice financing, or debt restructuring options to stabilize and improve your cash flow.</p>
+                        <p style="padding-top: 1rem;">Absolutely. We specialize in SME growth and restructuring. We can
+                            identify working capital solutions, invoice financing, or debt restructuring options to
+                            stabilize and improve your cash flow.</p>
                     </div>
                 </div>
 
@@ -596,7 +666,9 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p style="padding-top: 1rem;">We adhere to strict data privacy policies (PDPA compliant). All your personal and financial information is treated with the highest level of security and confidentiality.</p>
+                        <p style="padding-top: 1rem;">We adhere to strict data privacy policies (PDPA compliant). All
+                            your personal and financial information is treated with the highest level of security and
+                            confidentiality.</p>
                     </div>
                 </div>
             </div>
@@ -608,11 +680,15 @@
         <div class="container">
             <div class="cta-banner fade-in">
                 <div class="cta-content">
-                    <h2 class="text-gradient" style="font-size: clamp(2rem, 4vw, 3.5rem);">Let’s Build Your Financial Future Together</h2>
-                    <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Take the first step towards smarter financial growth. Speak to our specialists today.</p>
+                    <h2 class="text-gradient" style="font-size: clamp(2rem, 4vw, 3.5rem);">Let’s Build Your Financial
+                        Future Together</h2>
+                    <p
+                        style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Take the first step towards smarter financial growth. Speak to our specialists today.</p>
                     <div class="hero-btns" style="justify-content: center;">
                         <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
-                        <a href="https://wa.me/1234567890" class="btn btn-outline"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> Chat on WhatsApp</a>
+                        <a href="https://wa.me/60107131629" class="btn btn-outline"><i class="fa-brands fa-whatsapp"
+                                style="margin-right: 8px;"></i> Chat on WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -625,16 +701,21 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo" style="margin-bottom: 1rem;">
-                        <span class="nex">NEX</span><span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                        <span class="nex">NEX</span><span class="arrow"><i
+                                class="fa-solid fa-arrow-trend-up"></i></span>
                     </a>
-                    <p style="margin-bottom: 1.5rem; max-width: 300px;">Empowering businesses and individuals with strategic financial solutions for sustainable growth.</p>
+                    <p style="margin-bottom: 1.5rem; max-width: 300px;">Empowering businesses and individuals with
+                        strategic financial solutions for sustainable growth.</p>
                     <div style="display: flex; gap: 1rem;">
-                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
@@ -645,7 +726,7 @@
                         <li><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
@@ -661,20 +742,21 @@
                     <ul style="color: var(--text-muted);">
                         <li style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
                             <i class="fa-solid fa-location-dot" style="margin-top: 5px; color: var(--accent-blue);"></i>
-                            <span>Level 42, Menara NEX,<br>Jalan Sultan Ismail,<br>50250 Kuala Lumpur,<br>Malaysia</span>
+                            <span>Level 42, Menara NEX,<br>Jalan Sultan Ismail,<br>50250 Kuala
+                                Lumpur,<br>Malaysia</span>
                         </li>
                         <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
                             <i class="fa-solid fa-phone" style="margin-top: 5px; color: var(--accent-blue);"></i>
-                            <span>+60 3 1234 5678</span>
+                            <span>+60 10-713 1629</span>
                         </li>
                         <li style="display: flex; gap: 0.5rem;">
                             <i class="fa-solid fa-envelope" style="margin-top: 5px; color: var(--accent-blue);"></i>
-                            <span>hello@nexadvisory.com.my</span>
+                            <span>@nexadvisorysolution@gmail.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 NEX Advisory Group. All rights reserved.</p>
             </div>
@@ -683,4 +765,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
