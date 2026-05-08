@@ -227,25 +227,30 @@
                     </form>
 
                     <script>
-                        document.getElementById('consultation-form').addEventListener('submit', function (e) {
+                        document.getElementById('consultation-form').addEventListener('submit', function(e) {
                             e.preventDefault();
-
+                            
                             const name = document.getElementById('wa-name').value;
                             const email = document.getElementById('wa-email').value;
                             const phone = document.getElementById('wa-phone').value;
                             const service = document.getElementById('wa-service').value;
                             const message = document.getElementById('wa-message').value;
-
+                            
                             let text = `*New Consultation Request*\n\n`;
                             text += `*Full Name:* ${name}\n`;
                             text += `*Email:* ${email}\n`;
                             text += `*Phone:* ${phone}\n`;
                             text += `*Service of Interest:* ${service}\n`;
-
+                            
                             if (message.trim() !== '') {
-                                text += `*Message:* ${message}`;
+                                text += `*Message:* ${message}\n`;
                             }
-
+                            
+                            text += `\nPlease let us know what is your inquiry:\n`;
+                            text += `A. Debt Conso\n`;
+                            text += `B. Personal Cash Loan\n`;
+                            text += `C. SME Loan`;
+                            
                             const whatsappUrl = `https://wa.me/60107131629?text=${encodeURIComponent(text)}`;
                             window.open(whatsappUrl, '_blank');
                         });
