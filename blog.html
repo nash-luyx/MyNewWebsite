@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Insights & Guides | NEX Advisory Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        .page-header {
+            padding: 10rem 0 4rem;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .cta-banner {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: var(--glass-bg);
+            border-radius: 2rem;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(0, 102, 255, 0.1) 0%, transparent 60%);
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="nex-logo-2.png" alt="NEX Advisory Solutions">
+            </a>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faq.html">FAQ</a>
+                <a href="blog.html" style="color: var(--accent-light);">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Free
+                    Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header / Hero -->
+    <header class="page-header fade-in">
+        <div class="container">
+            <h1 class="text-gradient">Financial Insights & Guides</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Expert guides, practical budgeting tips, and financial strategies tailored for Malaysians.</p>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="blog-main-section" style="padding-top: 2rem;">
+        <div class="container">
+            
+            <!-- Search & Filter Controls -->
+            <div class="blog-search-container fade-in">
+                <i class="fa-solid fa-magnifying-glass blog-search-icon"></i>
+                <input type="text" id="blogSearch" class="blog-search-input" placeholder="Search articles by title or keyword...">
+            </div>
+
+            <div class="blog-filters fade-in">
+                <button class="filter-btn active" data-category="all">All Articles</button>
+                <button class="filter-btn" data-category="debt-management">Debt Management</button>
+                <button class="filter-btn" data-category="personal-credit">Personal Credit</button>
+                <button class="filter-btn" data-category="sme-financing">SME Financing</button>
+            </div>
+
+            <!-- Featured Article -->
+            <div class="featured-article fade-in blog-card" data-category="debt-management">
+                <div class="featured-card" style="padding: 2.5rem;">
+                    <div class="featured-img-placeholder">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <div class="blog-card-body" style="padding: 0;">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Debt Management</span>
+                            <span>June 20, 2026 &bull; 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title" style="font-size: 2rem; margin-bottom: 1rem; line-height: 1.3;">Debt Consolidation vs Personal Loan in Malaysia: Which is Right for You?</h2>
+                        <p class="blog-card-excerpt" style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">Are you struggling with multiple credit commitments? Learn the critical differences between debt consolidation programs and personal loans in Malaysia to make an informed decision for your financial future.</p>
+                        <a href="debt-consolidation-vs-personal-loan-malaysia.html" class="btn btn-primary" style="align-self: flex-start; padding: 0.8rem 2rem;">Read Article <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card Grid -->
+            <div class="blog-grid">
+                
+                <!-- Article 2 -->
+                <div class="blog-card fade-in" data-category="personal-credit">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Personal Credit</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">How to Improve Your CCRIS Score: A Practical Guide for Malaysians</h3>
+                        <p class="blog-card-excerpt">Your credit score is the key to unlocking better loan terms. Learn actionable, bank-approved steps to clean up your CCRIS record and boost your approvals.</p>
+                        <a href="how-to-improve-ccris-score-malaysia.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="blog-card fade-in" data-category="personal-credit">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Personal Credit</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">What Banks Look For Before Approving Your Financing Application</h3>
+                        <p class="blog-card-excerpt">Understanding bank credit guidelines can save you from immediate rejection. Discover the key criteria bank credit officers use to evaluate your profile.</p>
+                        <a href="what-banks-look-for-financing-approval.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="blog-card fade-in" data-category="personal-credit">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Personal Credit</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Common Reasons Why Loan Applications Get Rejected in Malaysia</h3>
+                        <p class="blog-card-excerpt">Did your loan get rejected? Don't let it damage your credit rating further. Learn the top reasons for rejections and how you can resolve them.</p>
+                        <a href="common-reasons-loan-applications-rejected-malaysia.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="blog-card fade-in" data-category="debt-management">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Debt Management</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">How Debt Restructuring Works in Malaysia: An Actionable Guide</h3>
+                        <p class="blog-card-excerpt">Struggling with high debt service commitments? Discover how debt restructuring can lower your monthly commitment by extending loan tenures legally.</p>
+                        <a href="how-debt-restructuring-works-malaysia.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="blog-card fade-in" data-category="sme-financing">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">SME Financing</span>
+                            <span>9 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">The Ultimate SME Financing Guide for Malaysian Small Businesses</h3>
+                        <p class="blog-card-excerpt">Fuel your enterprise growth with the right capital. Learn about trade facilities, working capital loans, and government-backed SME financing schemes.</p>
+                        <a href="sme-financing-guide-small-businesses-malaysia.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 7 -->
+                <div class="blog-card fade-in" data-category="personal-credit">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Personal Credit</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Personal Financing Explained: Islamic vs Conventional Facilities</h3>
+                        <p class="blog-card-excerpt">Choosing between Syariah-compliant and conventional personal financing? Read our unbiased comparison of terms, rates, and benefits in Malaysia.</p>
+                        <a href="personal-financing-explained-malaysia.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 8 -->
+                <div class="blog-card fade-in" data-category="debt-management">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Debt Management</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">How to Reduce Your Monthly Commitments and Boost Cash Flow</h3>
+                        <p class="blog-card-excerpt">Are your monthly bills eating up your salary? Explore smart strategies like refinancing, consolidation, and budget restructuring to free up cash flow.</p>
+                        <a href="how-to-reduce-monthly-commitments-malaysia.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 9 -->
+                <div class="blog-card fade-in" data-category="personal-credit">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Personal Credit</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Understanding CTOS and CCRIS: Key Credit Report Differences</h3>
+                        <p class="blog-card-excerpt">Many Malaysians confuse CTOS with CCRIS. Learn where this credit data comes from, what it contains, and how credit reporting agencies operate.</p>
+                        <a href="understanding-ctos-and-ccris-malaysia.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Article 10 -->
+                <div class="blog-card fade-in" data-category="debt-management">
+                    <div class="blog-card-img-placeholder">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-meta">
+                            <span class="blog-category-badge">Debt Management</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">Top Debt Management Tips for Malaysians in a Rising Interest Environment</h3>
+                        <p class="blog-card-excerpt">With rising living costs and OPR hikes, managing debt effectively is crucial. Read our expert tips to protect your household cash flow from inflation.</p>
+                        <a href="debt-management-tips-malaysians.html" class="btn btn-outline" style="margin-top: auto; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" style="padding-bottom: 6rem;">
+        <div class="container">
+            <div class="cta-banner fade-in">
+                <div class="cta-content">
+                    <h2 class="text-gradient" style="font-size: clamp(2rem, 4vw, 3.5rem);">Let’s Build Your Financial Future Together</h2>
+                    <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Take the first step towards smarter financial growth. Speak to our specialists today.</p>
+                    <div class="hero-btns" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                        <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
+                        <a href="https://wa.me/60107131629" class="btn btn-outline"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <img src="nex-logo-2.png" alt="NEX Advisory Solutions">
+                    </a>
+                    <p style="margin-bottom: 1.5rem; max-width: 300px;">Empowering businesses and individuals with
+                        strategic financial solutions for sustainable growth.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" style="color: var(--text-muted); font-size: 1.25rem;"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Debt Restructuring</a></li>
+                        <li><a href="services.html">Business Financing</a></li>
+                        <li><a href="services.html">Personal Financing</a></li>
+                        <li><a href="services.html">SME Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul style="color: var(--text-muted);">
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-location-dot" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>Jalan Tasik Permaisuri 2,<br>Bandar Tun Razak,<br>56000 Kuala Lumpur,<br>Wilayah Persekutuan Kuala Lumpur</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fa-solid fa-phone" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>+60 10-713 1629</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem;">
+                            <i class="fa-solid fa-envelope" style="margin-top: 5px; color: var(--accent-blue);"></i>
+                            <span>nexadvisorysolution@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEX Advisory Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const searchInput = document.getElementById('blogSearch');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            function filterArticles() {
+                const term = searchInput.value.toLowerCase();
+                const activeCategoryButton = document.querySelector('.filter-btn.active');
+                const activeCategory = activeCategoryButton ? activeCategoryButton.getAttribute('data-category').toLowerCase() : 'all';
+
+                blogCards.forEach(card => {
+                    const text = card.innerText.toLowerCase();
+                    const category = card.getAttribute('data-category').toLowerCase();
+                    
+                    const matchesSearch = text.includes(term);
+                    const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    filterArticles();
+                });
+            });
+
+            searchInput.addEventListener('input', filterArticles);
+        });
+    </script>
+</body>
+
+</html>
