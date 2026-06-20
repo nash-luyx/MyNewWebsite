@@ -170,6 +170,13 @@ section {
   gap: 0.5rem;
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .logo span.nex {
   color: var(--silver-light);
   letter-spacing: -1px;
